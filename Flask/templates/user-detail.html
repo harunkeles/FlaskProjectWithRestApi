@@ -1,0 +1,228 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+
+<div class="user-detail-wrapper">
+    <div class="container">
+
+        <div class="row main-row-wrapper">
+            <div class="col-sm-12 col-md-5 col-lg-4 left-side">
+                <!-- USER - INFO -->
+                <div class="card">
+                    <div class="card-title">
+                        <p class="">User Info</p>
+                    </div>
+                    <div class="card-body">
+                        <!-- ID -->
+                        <div id="userID-info" class="input-info ">
+                            <label for="userID" class="col-form-label ">ID</label>
+                            <div class="">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="userID"
+                                    value="{{userProfileDetaile.id}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- FİRST - NAME -->
+                        <div id="fname-info" class="input-info ">
+                            <label for="fname" class="col-form-label">Name</label>
+                            <div class="w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="fname"
+                                    value="{{userProfileDetaile.name}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- USERNAME -->
+                        <div id="username-info" class="input-info ">
+                            <label for="username" class="col-form-label">Username</label>
+                            <div class="w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="username"
+                                    value="{{userProfileDetaile.username}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+
+                    </div>
+                </div>
+                <!-- ************** -->
+                <!-- CONTACT - INFO -->
+                <div class="card">
+                    <div class="card-title">
+                        <p class="">Contact Info</p>
+                    </div>
+                    <div class="card-body">
+                        <!-- EMAIL -->
+                        <div id="email-info" class="input-info ">
+                            <label for="email" class="col-form-label">E-mail</label>
+                            <div class="w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="email"
+                                    value="{{userProfileDetaile.email}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- PHONE -->
+                        <div id="phone-info" class="input-info ">
+                            <label for="phone" class="col-form-label">Phone</label>
+                            <div class="w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="phone"
+                                    value="{{userProfileDetaile.phone}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- WEBSITE -->
+                        <div id="website-info" class="input-info ">
+                            <label for="website" class="col-form-label">Website</label>
+                            <div class=" w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center " id="website"
+                                    value="{{userProfileDetaile.website}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                    </div>
+                </div>
+                <!-- ************** -->
+                <!-- ADRESS - INFO -->
+                <div class="card">
+                    <div class="card-title">
+                        <p class="">Adress Info</p>
+                    </div>
+                    <div class="card-body">
+                        <!-- STREET -->
+                        <div id="street-info" class="input-info ">
+                            <label for="street" class="col-form-label">Street</label>
+                            <div class="w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="street"
+                                    value="{{userProfileDetaile.address.street}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- SUITE -->
+                        <div id="suite-info" class="input-info ">
+                            <label for="suite" class="col-form-label">Suite</label>
+                            <div class="w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="suite"
+                                    value="{{userProfileDetaile.address.suite}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- CITY -->
+                        <div id="city-info" class="input-info ">
+                            <label for="city" class="col-form-label">City</label>
+                            <div class=" w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center " id="city"
+                                    value="{{userProfileDetaile.address.city}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- ZIPCODE -->
+                        <div id="zipcode-info" class="input-info ">
+                            <label for="zipcode" class="col-form-label">Zipcode</label>
+                            <div class=" w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center " id="zipcode"
+                                    value="{{userProfileDetaile.address.zipcode}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- Geo -->
+                        <div id="user-adress-geo">
+                            <div id="geo-info" class="input-info ">
+                                <i class="far fa-compass"></i>
+                                <label for="geo" class="col-form-label">Geo</label>
+                            </div>
+                            <ul>
+                                <!-- LAT -->
+                                <li>
+                                    <i class="fas fa-angle-double-right"></i>
+                                    <div id="lat-info" class="input-info ">
+                                        <label for="lat" class="col-form-label">LAT</label>
+                                        <div class=" w-100">
+                                            <input type="text" readonly class="form-control-plaintext text-center "
+                                                id="lat" value="{{userProfileDetaile.address.geo.lat}}">
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- ************** -->
+                                <!-- LNG -->
+                                <li>
+                                    <i class="fas fa-angle-double-right"></i>
+                                    <div id="lng-info" class="input-info ">
+                                        <label for="lng" class="col-form-label">LNG</label>
+                                        <div class=" w-100">
+                                            <input type="text" readonly class="form-control-plaintext text-center "
+                                                id="lng" value="{{userProfileDetaile.address.geo.lng}}">
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- ************** -->
+                            </ul>
+                        </div>
+                        <!-- ************** -->
+                    </div>
+                </div>
+                <!-- ************** -->
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-8 right-side">
+                <!-- COMPANY - INFO -->
+                <div class="card">
+                    <div class="card-title">
+                        <p class="">Company Info</p>
+                    </div>
+                    <div class="card-body">
+                        <!-- COMPANY NAME -->
+                        <div id="comname-info" class="input-info ">
+                            <label for="comname" class="col-form-label">Company Name</label>
+                            <div class="w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="comname"
+                                    value="{{userProfileDetaile.company.name}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- CatchPhrase -->
+                        <div id="catchPhrase-info" class="input-info ">
+                            <label for="catchPhrase" class="col-form-label"> Catch Phrase</label>
+                            <div class="w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="catchPhrase"
+                                    value="{{userProfileDetaile.company.catchPhrase}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                        <!-- BS -->
+                        <div id="bs-info" class="input-info ">
+                            <label for="bs" class="col-form-label">BS</label>
+                            <div class=" w-100">
+                                <input type="text" readonly class="form-control-plaintext text-center " id="bs"
+                                    value="{{userProfileDetaile.company.bs}}">
+                            </div>
+                        </div>
+                        <!-- ************** -->
+                    </div>
+                </div>
+                <!-- ************** -->
+                <!-- ALBUMS  -->
+                <div id="users-all-albums" class="card">
+                    <div class="card-title">
+                        <p class=""> {{userProfileDetaile.name}}'s Albums</p>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            {% for user_album in user_albums %}
+                            {% if userProfileDetaile.id == user_album.userId %}
+                            <li>
+                                <i class="fas fa-angle-right"></i>
+                                <div id="albums-title-info" class="input-info ">
+                                    <label for="albums-title" class="col-form-label">{{user_album.title}}</label>
+                                </div>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <!-- ************** -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

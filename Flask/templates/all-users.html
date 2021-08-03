@@ -1,0 +1,69 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+
+<!-- IF USER EXISTS -->
+{% if userSummaryInfo %}
+<div class="all-users">
+    <div class="all-users-title">
+        <h1 class="text-center"> ALL USERS</h1>
+    </div>
+    <div class="container">
+
+        <!-- All Users -->
+
+        <div class="all-cards d-flex justify-content-center align-items-center flex-wrap">
+            {% for userInfo in userSummaryInfo %}
+            <div class="one-card">
+                <div class="card">
+                    <div class="card-title">
+                        <div id="userID-info" class="input-info ">
+                            <label for="userID" class="col-form-label ">ID</label>
+                            <div class="">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="userID"
+                                    value="{{userInfo.id}}">
+                            </div>
+                        </div>
+                        <div id="fname-info" class="input-info ">
+                            <label for="fname" class="col-form-label">Name</label>
+                            <div class="">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="fname"
+                                    value="{{userInfo.name}}">
+                            </div>
+                        </div>
+                        <div id="username-info" class="input-info ">
+                            <label for="username" class="col-form-label">Username</label>
+                            <div class="">
+                                <input type="text" readonly class="form-control-plaintext text-center" id="username"
+                                    value="{{userInfo.username}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="/users/{{userInfo.id}}/albums" type="button" class="">More Info</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- ************* -->
+    </div>
+</div>
+<!-- IF USER NOT EXISTS  -->
+{% else %}
+    {% if error %}
+    <div class="main-error-wrapper w-100 h-100 d-flex justify-content-center align-items-start mt-5">
+        <div class="alert alert-danger w-75">
+            <h1> {{ error }}</h1>
+        </div>
+    </div>
+    {% endif %}
+{% endif %}
+
+
+
+
+
+{% endblock %}

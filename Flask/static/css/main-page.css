@@ -1,0 +1,134 @@
+/* ALL USERS PAGE */
+
+.all-users {
+    margin: 30px 5px;
+}
+
+.all-users .all-users-title h1 {
+    font-family: 'IBM Plex Serif', serif;
+    text-shadow: rgb(71, 71, 71) 2px 3px 10px;
+
+}
+
+.all-users .container {
+    background-color: rgba(219, 219, 219, 0.664);
+}
+
+.all-users .container .all-cards {}
+
+
+/* One Card  */
+
+.all-users .one-card {
+    width: 46%;
+    margin: 10px 10px;
+}
+
+.all-users .one-card .card {
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 2px 4px, rgba(0, 0, 0, 0.23) 0px 2px 2px;
+
+}
+
+.all-users .one-card .card .card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.all-users .one-card .card .card-title .input-info {
+    /* background-color: rgb(255, 255, 255); */
+    padding: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 10px -10px, rgba(0, 0, 0, 0.3) 0px 3px 6px -3px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+.all-users .input-info label {
+    font-size: 13px;
+    color: rgb(138, 138, 138);
+    /* background-color: #1DA1F2; */
+    padding-right: 0;
+    padding-left: 2px;
+    margin-right: 10px;
+}
+
+.all-users .input-info input {
+    padding: 5px 5px 5px 2px;
+    font-size: 14px;
+    font-family: 'KoHo', sans-serif;
+    width: 100%;
+    background-color: rgba(207, 205, 205, 0.411);
+    color: black;
+    border-radius: 5px;
+    align-items: center;
+    /* margin-right: 15px; */
+
+}
+
+/* Card Title */
+
+.all-users .card .card-title {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#userID-info {
+    width: 70px;
+}
+
+/*----------Finish Card Title---------*/
+
+
+/* Card Body */
+
+.all-users .card .card-body {
+    height: 70px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.all-users .card a {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 10px -10px, rgba(0, 0, 0, 0.3) 0px 3px 6px -3px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    font-size: 17px;
+    font-family: 'IBM Plex Serif', serif;
+    background-color: #00858A;
+    color: white;
+    padding: 10px 10px;
+    width: 130px;
+    transition-property: width;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.1s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.all-users .card a:hover {
+    width: 155px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    background-color: #00858ac2;
+    color: white;
+}
+
+/*----------Finish Card body---------*/
+
+
+/*----------Finish One Card---------*/
+
+
+
+
+
+/* **************************************************************** */
+/* **************************************************************** */
